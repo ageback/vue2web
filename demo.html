@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue Project Guide setup</title>
+</head>
+
+<body>
+    <!-- 将库添加到这里 -->
+    <script src="lib/vue.min.js"></script>
+    <!-- 一些 HTML 代码 -->
+    <div id="root">
+        <p>{{message}}</p>
+        <input v-model="message" />
+    </div>
+    <!-- 一些 JavaScript 代码 -->
+    <script>
+        Vue.config.devtools = true
+        console.log('Yes! We are using Vue version', Vue.version)
+
+        var app = new Vue({
+            el:'#root',
+            name: 'MyApp',
+            data(){
+                return {
+                    message:'Hello Vue.js!'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
